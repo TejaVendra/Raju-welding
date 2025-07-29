@@ -1,0 +1,392 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #f8f8f8;
+}
+
+.home-container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.navbar-modern {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  background-color: #111;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid #333;
+  position: relative;
+}
+
+.navbar-orange {
+  background-color: #111;
+}
+
+.navbar-logo {
+  font-size: 1.8rem;
+  color: #ff7f11;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-links a {
+  color: #eee;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background-color: #ff7f11;
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+.navbar-links a:hover {
+  color: #ff7f11;
+}
+
+.navbar-cta {
+  background-color: #ff7f11;
+  color: #000;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff7f11;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.navbar-cta:hover {
+  background-color: #ffa64d;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+  padding: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #111;
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-cta {
+    display: none;
+  }
+}
+
+.intro-modern {
+  padding: 2rem 2rem 4rem;
+  text-align: center;
+}
+
+.highlight-box {
+  background-color: rgba(255, 127, 17, 0.15);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #ffb87a;
+  font-weight: 500;
+}
+
+.intro-heading {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.4;
+}
+
+.highlight {
+  color: #ff7f11;
+}
+
+.intro-subtext {
+  max-width: 600px;
+  margin: 1.2rem auto 2rem;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.intro-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-glow {
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+}
+
+.primary {
+  background-color: #ff7f11;
+  color: #000;
+  box-shadow: 0 0 12px #ff7f11;
+}
+
+.secondary {
+  background-color: transparent;
+  color: #ff7f11;
+  border: 2px solid #ff7f11;
+}
+
+.btn-glow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px #ff7f11;
+}
+.stats-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background: url('/welding-bg.jpg') center/cover no-repeat;
+  backdrop-filter: brightness(0.8);
+}
+
+.stat-card {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 280px;
+  text-align: center;
+  border: 1px solid #ff7f11;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 12px #ff7f11;
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ff7f11;
+}
+
+.stat-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.stat-description {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .stats-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.stats-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background: url('/welding-bg.jpg') center/cover no-repeat;
+  backdrop-filter: brightness(0.8);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 280px;
+  text-align: center;
+  border: 1px solid #ff7f11;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 12px #ff7f11;
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ff7f11;
+}
+
+.stat-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.stat-description {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .stats-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.intro-subheading {
+  font-size: 2rem;
+  color: #ff7f11;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .intro-subheading {
+    font-size: 1.5rem;
+  }
+}
+
+.home-container {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+.stats-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  backdrop-filter: brightness(0.8);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 280px;
+  text-align: center;
+  border: 1px solid #ff7f11;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 12px #ff7f11;
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ff7f11;
+}
+
+.stat-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.stat-description {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .stats-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro-subheading {
+    font-size: 1.5rem;
+  }
+
+  .stat-card {
+    width: 90%;
+  }
+}
+
+.intro-subheading {
+  font-size: 2rem;
+  color: #ff7f11;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}

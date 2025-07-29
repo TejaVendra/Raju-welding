@@ -1,0 +1,447 @@
+/**
+ * File: DesignCategory.css (Updated)
+ * All class names prefixed with 'designs-' to prevent conflicts.
+ */
+
+.designs-section {
+  padding: 2rem 1rem;
+  background-color: #0e0e0e;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.designs-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.designs-title {
+  color: #ff7f11;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.designs-back-btn {
+  background: transparent;
+  color: #ff7f11;
+  font-size: 1rem;
+  border: 1px solid #ff7f11;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.designs-back-btn:hover {
+  background: #ff7f11;
+  color: #0e0e0e;
+}
+
+.designs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.designs-card {
+  background: #1a1a1a;
+  border: 1px solid #ff7f11;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 280px;
+}
+
+.designs-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(255, 127, 17, 0.4);
+}
+
+.designs-card-img-wrapper {
+  height: 180px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #000;
+}
+
+.designs-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.designs-card-img:hover {
+  transform: scale(1.05);
+}
+
+.designs-card-footer {
+  padding: 0.8rem;
+  text-align: center;
+  background-color: #111;
+  border-top: 1px solid #333;
+}
+
+.designs-card-footer p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.designs-order-btn {
+  background-color: #ff7f11;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 0.3rem;
+}
+
+.designs-order-btn:hover {
+  background-color: #e66e00;
+}
+
+.designs-img-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  flex-direction: column;
+}
+
+.designs-img-large {
+  max-width: 90%;
+  max-height: 80vh;
+  border: 3px solid #ff7f11;
+  border-radius: 12px;
+}
+
+.designs-close-btn {
+  margin-top: 1rem;
+  background: #ff7f11;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.designs-order-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  max-width: 420px;
+
+  /* Remove this ↓ */
+  /* transform: translate(-50%, -50%); */
+
+  /* Add these ↓ */
+  transform: none;
+  translate: -50% -50%; /* CSS native translation */
+  
+  background-color: #1b1b1b;
+  border: 2px solid #ff7f11;
+  padding: 1.5rem;
+  border-radius: 12px;
+  z-index: 1001;
+  box-shadow: 0 0 25px rgba(255, 127, 17, 0.5);
+  will-change: transform, opacity;
+}
+
+
+
+
+.designs-order-form h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #ff7f11;
+}
+
+.designs-order-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.designs-order-form input {
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.designs-form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.designs-order-form button {
+  flex: 1;
+  padding: 0.6rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.designs-order-form .submit-button {
+  background-color: #ff7f11;
+  color: white;
+}
+
+.designs-order-form .submit-button:hover {
+  background-color: #e66e00;
+}
+
+.designs-order-form .cancel-button {
+  background-color: #555;
+  color: white;
+}
+
+.designs-order-form .cancel-button:hover {
+  background-color: #333;
+}
+
+.no-designs-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ccc;
+  padding: 40px 20px;
+  font-weight: 500;
+  animation: fadeIn 0.6s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px dashed #555;
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 600px;
+}
+
+/* Optional fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .designs-title {
+    font-size: 1.6rem;
+  }
+
+  .designs-card {
+    height: auto;
+  }
+
+  .designs-card-img-wrapper {
+    height: 140px;
+  }
+
+  .designs-order-btn {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .designs-order-form {
+    padding: 1rem;
+  }
+
+  .designs-order-form input {
+    font-size: 0.9rem;
+  }
+}
+.designs-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+.designs-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ff7f11;
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Spinner during form submit */
+.submit-spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #1abc9c;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  margin: 10px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Success message */
+.submit-success {
+  color: #27ae60;
+  font-weight: bold;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* Error message */
+.submit-error {
+  color: #e74c3c;
+  font-weight: bold;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* Make form responsive */
+.designs-order-form form input,
+.designs-order-form form button {
+  width: 100%;
+  max-width: 400px;
+  margin: 5px auto;
+  display: block;
+}
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal Box */
+.modal {
+  background: #fff;
+  padding: 24px 32px;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: popUp 0.3s ease;
+}
+
+.modal p {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.modal button {
+  background-color: #28a745;
+  border: none;
+  padding: 10px 24px;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal button:hover {
+  background-color: #218838;
+}
+
+/* Animation */
+@keyframes popUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* Center the spinner on screen */
+.spinner-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #0e0e0e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Dots Loader */
+.dots-loader {
+  display: flex;
+  gap: 10px;
+}
+
+.dots-loader span {
+  width: 14px;
+  height: 14px;
+  background-color: #ff7f11;
+  border-radius: 50%;
+  animation: bounce 0.6s infinite ease-in-out alternate;
+}
+
+/* Delay animation for each dot */
+.dots-loader span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dots-loader span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Bouncing animation */
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(-14px);
+    opacity: 1;
+  }
+}
