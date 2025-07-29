@@ -3,7 +3,7 @@ import Intro from '../components/Intro'
 import Services from '../pages/Serives'
 import Designs from '../pages/Designs'
 import '../styles/Home.css';
-import Stats from '../components/stats';
+import Stats from '../components/Stats'
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Contact from './Contact';
