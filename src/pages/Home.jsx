@@ -30,7 +30,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <video className="bg-video" autoPlay loop muted>
-        <source src="/Intro-video.mp4" type="video/mp4" />
+        <source src="https://res.cloudinary.com/dfnbvtqae/video/upload/v1753952855/Intro-video_w6yryl.mp4 " type="video/mp4" />
       </video>
       <Navbar />
       <Intro />
