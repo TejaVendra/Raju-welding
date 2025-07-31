@@ -22,20 +22,11 @@ const Services = () => {
       description: t("service3Desc")
     },
     {
-      title: t("service4Title"),
-      image: '/services/fabrication.jpg',
-      description: t("service4Desc")
-    },
-    {
       title: t("service5Title"),
       image: '/services/gatesandgrills.jpg',
       description: t("service5Desc")
     },
-    {
-      title: t("service6Title"),
-      image: '/services/services.jpg',
-      description: t("service6Desc")
-    }
+  
   ];
 
   return (
