@@ -102,42 +102,44 @@ const DesignCategory = () => {
 
 
       ) : (
-        <div className="designs-grid">
-          {images.length === 0 ? (
-            <p className="no-designs-message">{t("noDesigns")}</p>
-          ) : (
-            images.map((img, index) => (
-              <motion.div
-                key={index}
-                className="designs-card"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
+          <div className="designs-grid">
+      {images.length === 0 ? (
+        <p className="no-designs-message">{t("noDesigns")}</p>
+      ) : (
+        images.map((img, index) => (
+          <motion.div
+            key={index}
+            className="designs-card"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, delay: index * 0.05 }}
+          >
+            <div
+              className="designs-card-img-wrapper"
+              onClick={() => setSelectedImage(img.image_url)}
+            >
+              <img
+                src={img.image_url}
+                alt={`${title} ${index + 1}`}
+                className="designs-card-img"
+                loading="lazy"
+              />
+            </div>
+            <div className="designs-card-footer">
+              <p>{t("design")} {index + 1}</p>
+              <button
+                className="designs-order-btn"
+                onClick={() => handleOrderClick(img.image_url, index)}
               >
-                <div
-                  className="designs-card-img-wrapper"
-                  onClick={() => setSelectedImage(img.image_url)}
-                >
-                  <img
-                    src={img.image_url}
-                    alt={`${title} ${index + 1}`}
-                    className="designs-card-img"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="designs-card-footer">
-                  <p>{t("design")} {index + 1}</p>
-                  <button
-                    className="designs-order-btn"
-                    onClick={() => handleOrderClick(img.image_url, index)}
-                  >
-                    {t("orderNow")}
-                  </button>
-                </div>
-              </motion.div>
-            ))
-          )}
-        </div>
+                {t("orderNow")}
+              </button>
+            </div>
+          </motion.div>
+        ))
+      )}
+    </div>
+
       )}
 
       {selectedImage && (
